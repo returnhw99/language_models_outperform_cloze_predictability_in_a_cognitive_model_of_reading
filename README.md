@@ -1,11 +1,10 @@
-# The OB1-reader 
-### A model of word recognition, eye movements and now, comprehension during reading
+# LM-generated predictability in OB1-reader model of reading
 
-by Adrielli Lopes & Martijn Meeter (Vrije Universiteit Amsterdam)
+This repository contains the code to run the experiments reported in the following paper: *Lopes Rego, A. T., Snell, J., & Meeter, M. (2024). Language models outperform cloze predictability in a cognitive model of reading. PLOS Computational Biology, 20(9).* 
 
-This repository contains the code to run the OB1-reader (first proposed by Snell et al. 2018), a model that simulates word recognition and eye movement control during reading. The model is a computational implementation of cognitive theories on reading and can be used to test predictions of these theories on various experimental set-ups. Previous studies have shown both quantitative and qualitative fits to human behavioural data in various tasks (e.g. Snell et al. 2018 for natural reading, Meeter et al. 2020 for flankers and priming).
+Abstract:
 
-The theoretical framework OB1-reader formulates primarily results from integrating relative letter-position coding (Grainger & Van Heuven, 2004) and parallel graded processing (e.g. Engbert et al. 2005) to bridge accounts on single-word recognition and eye movements during reading, respectively. These are largely based on bottom-up, automatic and early processing of visual input. Because language processing during reading is not limited to bottom-up processing and word recognition, we are currently working on expanding the model to contain feedback processes at the semantic and discourse levels to simulate reading comprehension in various dimensions: as a process, as a product and as a skill. This is the main goal of my PhD project entitled *Computational Models of Reading Comprehension.*
+"Although word predictability is commonly considered an important factor in reading, sophisticated accounts of predictability in theories of reading are lacking. Computational models of reading traditionally use cloze norming as a proxy of word predictability, but what cloze norms precisely capture remains unclear. This study investigates whether large language models (LLMs) can fill this gap. Contextual predictions are implemented via a novel parallel-graded mechanism, where all predicted words at a given position are pre-activated as a function of contextual certainty, which varies dynamically as text processing unfolds. Through reading simulations with OB1-reader, a cognitive model of word recognition and eye-movement control in reading, we compare the model’s fit to eye-movement data when using predictability values derived from a cloze task against those derived from LLMs (GPT-2 and LLaMA). Root Mean Square Error between simulated and human eye movements indicates that LLM predictability provides a better fit than cloze. This is the first study to use LLMs to augment a cognitive model of reading with higher-order language processing while proposing a mechanism on the interplay between word predictability and eye movements."
 
 ## Repository structure
 
@@ -54,8 +53,5 @@ For instance, to run a simulation of the task of natural reading, with the stimu
 ## References
 
 Snell, J., van Leipsig, S., Grainger, J., & Meeter, M. (2018). OB1-reader: A model of word recognition and eye movements in text reading. Psychological review, 125(6), 969.
-Meeter, M., Marzouki, Y., Avramiea, A. E., Snell, J., & Grainger, J. (2020). The role of attention in word recognition: Results from OB1‐reader. Cognitive science, 44(7), e12846.
-Grainger, J., & Van Heuven, W. J. (2004). Modeling letter position coding in printed word perception.
-Engbert, R., Nuthmann, A., Richter, E. M., & Kliegl, R. (2005). SWIFT: a dynamical model of saccade generation during reading. Psychological review, 112(4), 777.
 Luke, S. G., & Christianson, K. (2018). The Provo Corpus: A large eye-tracking corpus with predictability norms. Behavior research methods, 50, 826-833.
 Van Heuven, W. J., Mandera, P., Keuleers, E., & Brysbaert, M. (2014). SUBTLEX-UK: A new and improved word frequency database for British English. Quarterly journal of experimental psychology, 67(6), 1176-1190.
